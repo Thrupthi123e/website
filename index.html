@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Street Light Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Enhanced Login Page -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login to Street Light Monitor</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="container" id="mainContent" style="display:none;">
+        <header>
+            <h1>Street Light Monitoring Dashboard</h1>
+        </header>
+
+        <div class="main-section">
+            <div class="device-info">
+                <h2>Device Information</h2>
+                <div class="dropdown">
+                    <label for="deviceSelect">Choose Device: </label>
+                    <select id="deviceSelect" onchange="fetchDeviceData()">
+                        <option value="Device 1">Device 1</option>
+                        <option value="Device 2">Device 2</option>
+                        <option value="Device 3">Device 3</option>
+                    </select>
+                </div>
+                <p><strong>Device UID:</strong> <span id="deviceUID">Loading...</span></p>
+                <p><strong>Temperature:</strong> <span id="temperature">Loading...</span> °C</p>
+                <p><strong>Humidity:</strong> <span id="humidity">Loading...</span> %</p>
+                <p><strong>Smoke Level:</strong> <span id="smokeLevel">Loading...</span></p>
+                <button id="surveillanceBtn" onclick="startSurveillance()">Start Surveillance</button>
+            </div>
+
+            <!-- Chart for Metrics -->
+            <div class="charts">
+                <h2>Device Performance Metrics</h2>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Street Light Monitoring System | IoT Hackathon 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <img src="images.jpg" alt="Street Light Image">
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:5500",  // Use 5500 or whatever port Live Server is using
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
